@@ -1,3 +1,6 @@
+const baseURL = "http://localhost:3000"
+
 document.addEventListener("DOMContentLoaded", () => {
-  debugger
+  const api = new ApiService(baseURL)
+  api.getAllSunglasses()
 })
