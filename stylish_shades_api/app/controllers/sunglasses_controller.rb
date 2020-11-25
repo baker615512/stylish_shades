@@ -1,8 +1,9 @@
 class SunglassesController < ApplicationController
+  before_action :set_category
   before_action :set_sunglass, only: [:show, :update]
 
   def index
-    @sunglasses = Sunglass.all 
+    @sunglasses = Sunglass.where("category_id = ?", params[:id])
     render json: @sunglasses, except: [:created_at, :updated_at]
   end
 
@@ -24,8 +25,12 @@ class SunglassesController < ApplicationController
     params.require(:sunglass).permit(:model, :price, :category_id, :image, :stock_quantity)
   end
 
+  def set_category
+    @category = Category.find_by_id(params[:category_id])
+  end
+
   def set_sunglass
-    @sunglass = Sunglass.find_by_id(params[:id])
+    @category_sunglass = @category.sunglasses.find_by_id(params[:id])
   end
 
 end
