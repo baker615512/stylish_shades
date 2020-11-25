@@ -3,7 +3,7 @@ class ApiService {
     this.baseURL = baseURL
   }
 
-  getAllSunglasses = () => {
-    fetch(`${this.baseURL}/sunglasses`).then(resp => resp.json()).then(data => console.log(data))
-  }
+  getAllCategories = () => fetch(`${this.baseURL}/categories`).then(resp => resp.json())
+
+  getAllSunglasses = () => fetch(`${this.baseURL}/sunglasses`).then(resp => resp.json())
 }

@@ -1,4 +1,5 @@
 class Sunglass {
-  constructor(sunglass)
+  constructor(sunglass){
   this.sunglass = sunglass
+  }
 }
