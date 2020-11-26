@@ -27,8 +27,8 @@ class Category {
 
   handleOnClick = () => {
     const id = this.category.dataset.id
-    api.getSunglassesByCategory(id).then()
-
+    api.getSunglassesByCategory(id).then((data) => 
+      data.forEach((sunglass) => new Sunglass(sunglass))) // I need to send this data to the sunglass class
     //get the category id from the data-id attribute
     //pass the id into a method on apiService to make a request to categories/:id/sunglasses
   }
