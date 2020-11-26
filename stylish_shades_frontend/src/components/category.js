@@ -13,9 +13,9 @@ class Category {
   }
 
   render(){
-    // include the category id as a data attribute
     const btn = document.createElement("button")
     btn.className = "category-button"
+    btn.dataset.id = this.category.id 
     btn.innerHTML = this.category.name
     this.constructor.container.appendChild(btn)
     this.btn = btn
@@ -26,7 +26,9 @@ class Category {
   }
 
   handleOnClick = () => {
-    console.log("clicked")
+    const id = this.category.dataset.id
+    api.getSunglassesByCategory(id).then()
+
     //get the category id from the data-id attribute
     //pass the id into a method on apiService to make a request to categories/:id/sunglasses
   }
