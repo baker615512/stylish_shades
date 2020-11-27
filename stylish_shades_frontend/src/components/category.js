@@ -17,8 +17,8 @@ class Category {
     btn.className = "category-button"
     btn.dataset.id = this.category.id 
     btn.innerHTML = this.category.name
-    this.constructor.container.appendChild(btn)
     this.btn = btn
+    this.constructor.container.appendChild(btn)
   }
 
   attachEventListener = () => {
@@ -26,7 +26,7 @@ class Category {
   }
 
   handleOnClick = () => {
-    const id = this.category.dataset.id
+    const id = this.category.id
     api.getSunglassesByCategory(id).then((data) => 
       data.forEach((sunglass) => new Sunglass(sunglass))) // I need to send this data to the sunglass class
     //get the category id from the data-id attribute
