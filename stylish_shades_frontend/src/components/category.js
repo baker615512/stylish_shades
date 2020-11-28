@@ -28,9 +28,8 @@ class Category {
   handleOnClick = () => {
     const id = this.category.id
     api.getSunglassesByCategory(id).then((data) => 
-      data.forEach((sunglass) => new Sunglass(sunglass))) // I need to send this data to the sunglass class
-    //get the category id from the data-id attribute
-    //pass the id into a method on apiService to make a request to categories/:id/sunglasses
+      data.forEach((sunglass) => new Sunglass(sunglass))) //if casual sunglasses are already rendered
+      //they should be hidden when sporty button is clicked
   }
 
 }
