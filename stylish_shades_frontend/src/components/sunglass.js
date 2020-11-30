@@ -7,11 +7,16 @@ class Sunglass {
     //this.attachEventListener()
   }
 
+  static renderAll(sunglasses){
+    this.container.innerHTML = ""
+    sunglasses.forEach(sunglass => new Sunglass(sunglass))
+  }
+
   render(){
-    let image = document.createElement("image")
+    let image = document.createElement("img")
     image.className = "sunglass-image"
     image.dataset.id = this.sunglass.id 
-    image.innerHTML = `<img src=${this.sunglass.image} />` //make image smaller
+    image.src = this.sunglass.image
     this.image = image
     this.constructor.container.appendChild(image)
   }
