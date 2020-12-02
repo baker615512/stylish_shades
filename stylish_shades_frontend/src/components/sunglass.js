@@ -13,12 +13,23 @@ class Sunglass {
   }
 
   render(){
-    let image = document.createElement("img")
-    image.className = "sunglass-image"
-    image.dataset.id = this.sunglass.id 
-    image.src = this.sunglass.image
-    this.image = image
-    this.constructor.container.appendChild(image)
+    let card = document.createElement("div")
+    card.className = "card" 
+    this.card = card
+    card.innerHTML = this.renderInnerHtml()
+    this.constructor.container.appendChild(card)
+  }
+
+  renderInnerHtml(){
+    return `
+    <img src="${this.sunglass.image}" class="card-img-top">
+    <div class="card-body">
+    <h4 class="card-title">${this.sunglass.model}</h4>
+    <h5 class="card-text">Price: $${this.sunglass.price}<br>
+    Quantity in Stock: ${this.sunglass.stock_quantity}</h5>
+    <a href="#" class="btn btn-primary">Buy Now!</a>
+    </div>
+    `
   }
 
   //add button under image to get more info
