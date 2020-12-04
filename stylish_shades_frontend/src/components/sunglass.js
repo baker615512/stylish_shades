@@ -4,7 +4,7 @@ class Sunglass {
   constructor(sunglass){
     this.sunglass = sunglass
     this.render()
-    //this.attachEventListener()
+    this.attachEventListener()
   }
 
   static renderAll(sunglasses){
@@ -25,15 +25,28 @@ class Sunglass {
     <img src="${this.sunglass.image}" class="card-img-top">
     <div class="card-body">
     <h4 class="card-title">${this.sunglass.model}</h4>
-    <h5 class="card-text">Price: $${this.sunglass.price}<br>
-    Quantity in Stock: ${this.sunglass.stock_quantity}</h5>
-    <a href="#" class="btn btn-primary">Buy Now!</a>
+    <h5 class="card-text">Price: $${this.sunglass.price}</h5>
+    <h6 class="card-quantity">Quantity in Stock: ${this.sunglass.stock_quantity}</h6>
+    <button ${this.sunglass.stock_quantity < 1 ? "disabled" : ''} data-id="${this.sunglass.id}" class="btn btn-primary buy-btn">Buy Now!</button>
     </div>
     `
   }
 
-  //add button under image to get more info
-  //this should hide everything else except "Casual" & "Hidden"
-  //card should display all attributes of selected sunglasses
-  //card should have a "Buy Now" button that will decrement stock by one when clicked
+  attachEventListener = () => {
+    this.card.addEventListener("click", (event) => this.handleOnClick(event))
+  }
+
+  handleOnClick = (event) => {
+    if (event.target.classList.contains("buy-btn")){
+      let id = event.target.dataset.id
+      api.updateStockQuantity(id).then((sunglass) =>
+        this.updateSunglass(sunglass)
+      )
+    }
+  }
+
+  updateSunglass = (sunglass) => {
+    this.sunglass = sunglass
+    this.card.innerHTML = this.renderInnerHtml()
+  }
 }
