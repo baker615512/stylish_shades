@@ -1,18 +1,13 @@
 class SunglassesController < ApplicationController
-  before_action :set_category
-  before_action :set_sunglass, only: [:show, :update]
+  before_action :load_sunglass, only: [:show, :update]
 
   def index
-    @sunglasses = Sunglass.where("category_id = ?", params[:id])
+    @sunglasses = Sunglass.where(category_id: params[:category_id].to_i)
     render json: @sunglasses, except: [:created_at, :updated_at]
   end
 
-  def show
-    render json: @sunglass
-  end
-
   def update
-    if @sunglass.update(sunglass_params)
+    if @sunglass.update(stock_quantity: @sunglass.stock_quantity - 1)
       render json: @sunglass
     else 
       render json: @sunglass.errors
@@ -25,12 +20,8 @@ class SunglassesController < ApplicationController
     params.require(:sunglass).permit(:model, :price, :category_id, :image, :stock_quantity)
   end
 
-  def set_category
-    @category = Category.find_by_id(params[:category_id])
-  end
-
-  def set_sunglass
-    @category_sunglass = @category.sunglasses.find_by_id(params[:id])
+  def load_sunglass
+    @sunglass = Sunglass.find(params[:id])
   end
 
 end
