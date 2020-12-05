@@ -6,7 +6,8 @@ h1 {
 }
 
 .category-button {
-  width: 50%;
+  margin: 15px;
+  width: 47%;
   background-color: skyblue;
 }
 
