@@ -4052,3 +4052,149 @@ Processing by SunglassesController#index as */*
 Completed 200 OK in 39ms (Views: 38.5ms | ActiveRecord: 0.3ms | Allocations: 2051)
 
 
+Started GET "/categories" for ::1 at 2020-12-04 18:16:38 -0600
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CategoriesController#index as */*
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:5:in `index'
+Completed 200 OK in 14ms (Views: 7.9ms | ActiveRecord: 1.3ms | Allocations: 5236)
+
+
+Started GET "/categories" for ::1 at 2020-12-04 18:16:56 -0600
+Processing by CategoriesController#index as */*
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.2ms | Allocations: 1048)
+
+
+Started GET "/categories" for ::1 at 2020-12-04 18:17:08 -0600
+Processing by CategoriesController#index as */*
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.2ms | Allocations: 1048)
+
+
+Started GET "/categories" for ::1 at 2020-12-04 18:17:24 -0600
+Processing by CategoriesController#index as */*
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.1ms | Allocations: 1048)
+
+
+Started GET "/categories" for ::1 at 2020-12-04 18:18:06 -0600
+Processing by CategoriesController#index as */*
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.1ms | Allocations: 1048)
+
+
+Started GET "/categories/1/sunglasses" for ::1 at 2020-12-04 18:18:12 -0600
+Processing by SunglassesController#index as */*
+  Parameters: {"category_id"=>"1"}
+  [1m[36mSunglass Load (1.0ms)[0m  [1m[34mSELECT "sunglasses".* FROM "sunglasses" WHERE "sunglasses"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/sunglasses_controller.rb:6:in `index'
+Completed 200 OK in 18ms (Views: 11.8ms | ActiveRecord: 1.7ms | Allocations: 8474)
+
+
+Started GET "/categories/2/sunglasses" for ::1 at 2020-12-04 18:18:15 -0600
+Processing by SunglassesController#index as */*
+  Parameters: {"category_id"=>"2"}
+  [1m[36mSunglass Load (0.3ms)[0m  [1m[34mSELECT "sunglasses".* FROM "sunglasses" WHERE "sunglasses"."category_id" = ?[0m  [["category_id", 2]]
+  ↳ app/controllers/sunglasses_controller.rb:6:in `index'
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.3ms | Allocations: 2048)
+
+
+Started GET "/categories/1/sunglasses" for ::1 at 2020-12-04 18:18:17 -0600
+Processing by SunglassesController#index as */*
+  Parameters: {"category_id"=>"1"}
+  [1m[36mSunglass Load (0.2ms)[0m  [1m[34mSELECT "sunglasses".* FROM "sunglasses" WHERE "sunglasses"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/sunglasses_controller.rb:6:in `index'
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.2ms | Allocations: 2048)
+
+
+Started GET "/categories" for ::1 at 2020-12-04 18:19:51 -0600
+Processing by CategoriesController#index as */*
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.2ms | Allocations: 1031)
+
+
+Started GET "/categories" for ::1 at 2020-12-04 18:20:05 -0600
+Processing by CategoriesController#index as */*
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.2ms | Allocations: 1031)
+
+
+Started GET "/categories" for ::1 at 2020-12-04 18:20:20 -0600
+Processing by CategoriesController#index as */*
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.2ms | Allocations: 1031)
+
+
+Started GET "/categories/1/sunglasses" for ::1 at 2020-12-04 18:20:24 -0600
+Processing by SunglassesController#index as */*
+  Parameters: {"category_id"=>"1"}
+  [1m[36mSunglass Load (0.3ms)[0m  [1m[34mSELECT "sunglasses".* FROM "sunglasses" WHERE "sunglasses"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/sunglasses_controller.rb:6:in `index'
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.3ms | Allocations: 2048)
+
+
+Started GET "/categories/2/sunglasses" for ::1 at 2020-12-04 18:20:26 -0600
+Processing by SunglassesController#index as */*
+  Parameters: {"category_id"=>"2"}
+  [1m[36mSunglass Load (0.4ms)[0m  [1m[34mSELECT "sunglasses".* FROM "sunglasses" WHERE "sunglasses"."category_id" = ?[0m  [["category_id", 2]]
+  ↳ app/controllers/sunglasses_controller.rb:6:in `index'
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.4ms | Allocations: 2048)
+
+
+Started GET "/categories/1/sunglasses" for ::1 at 2020-12-04 18:20:26 -0600
+Processing by SunglassesController#index as */*
+  Parameters: {"category_id"=>"1"}
+  [1m[36mSunglass Load (0.3ms)[0m  [1m[34mSELECT "sunglasses".* FROM "sunglasses" WHERE "sunglasses"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/sunglasses_controller.rb:6:in `index'
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.3ms | Allocations: 2048)
+
+
+Started GET "/categories" for ::1 at 2020-12-04 18:26:44 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CategoriesController#index as */*
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.5ms | Allocations: 1047)
+
+
+Started GET "/categories/1/sunglasses" for ::1 at 2020-12-04 18:27:37 -0600
+Processing by SunglassesController#index as */*
+  Parameters: {"category_id"=>"1"}
+  [1m[36mSunglass Load (1.3ms)[0m  [1m[34mSELECT "sunglasses".* FROM "sunglasses" WHERE "sunglasses"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/sunglasses_controller.rb:6:in `index'
+Completed 200 OK in 6ms (Views: 3.8ms | ActiveRecord: 1.3ms | Allocations: 2069)
+
+
+Started GET "/categories/2/sunglasses" for ::1 at 2020-12-04 18:27:42 -0600
+Processing by SunglassesController#index as */*
+  Parameters: {"category_id"=>"2"}
+  [1m[36mSunglass Load (0.4ms)[0m  [1m[34mSELECT "sunglasses".* FROM "sunglasses" WHERE "sunglasses"."category_id" = ?[0m  [["category_id", 2]]
+  ↳ app/controllers/sunglasses_controller.rb:6:in `index'
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.4ms | Allocations: 2048)
+
+
+Started PATCH "/sunglasses/13" for ::1 at 2020-12-04 18:27:50 -0600
+Processing by SunglassesController#update as */*
+  Parameters: {"id"=>"13"}
+  [1m[36mSunglass Load (0.3ms)[0m  [1m[34mSELECT "sunglasses".* FROM "sunglasses" WHERE "sunglasses"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/sunglasses_controller.rb:24:in `load_sunglass'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/sunglasses_controller.rb:10:in `update'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/sunglasses_controller.rb:10:in `update'
+  [1m[36mSunglass Update (4.1ms)[0m  [1m[33mUPDATE "sunglasses" SET "stock_quantity" = ?, "updated_at" = ? WHERE "sunglasses"."id" = ?[0m  [["stock_quantity", 19], ["updated_at", "2020-12-05 00:27:50.282486"], ["id", 13]]
+  ↳ app/controllers/sunglasses_controller.rb:10:in `update'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/sunglasses_controller.rb:10:in `update'
+Completed 200 OK in 29ms (Views: 0.6ms | ActiveRecord: 5.6ms | Allocations: 7329)
+
+
