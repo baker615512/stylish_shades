@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  resources :categories do
-    resources :sunglasses
+  resources :categories, only: [:index] do
+    resources :sunglasses, only: [:index]
   end
   resources :sunglasses, only: [:update]
   
