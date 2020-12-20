@@ -15,9 +15,12 @@ class Sunglass {
   render(){
     let card = document.createElement("div")
     card.className = "card" 
+    card.setAttribute("data-price", this.sunglass.price)
     this.card = card
     card.innerHTML = this.renderInnerHtml()
     this.constructor.container.appendChild(card)
+    let filter = document.getElementById("filter")
+    filter.style.visibility = "visible"
   }
 
   renderInnerHtml(){
@@ -49,4 +52,9 @@ class Sunglass {
     this.sunglass = sunglass
     this.card.innerHTML = this.renderInnerHtml()
   }
+
+  //static handleTopButton = () => {
+  //  console.log("do whatever a button needs to do")
+  //}
 }
+
