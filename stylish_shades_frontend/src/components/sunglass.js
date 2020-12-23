@@ -55,6 +55,16 @@ class Sunglass {
     this.card.innerHTML = this.renderInnerHtml()
   }
 
+  static sortPrice(){
+    let sortedArray = Sunglass.all.sort((a, b) => a.sunglass.price - b.sunglass.price)
+    Sunglass.container.innerHTML = ""
+    sortedArray.forEach(function(sunglass){
+      sunglass.render()
+      sunglass.attachEventListener()
+    })
+      
+  } 
+
   //static handleTopButton = () => {
   //  console.log("do whatever a button needs to do")
   //}

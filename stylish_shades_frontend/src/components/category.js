@@ -27,6 +27,7 @@ class Category {
 
   handleOnClick = () => {
     const id = this.category.id
+    Sunglass.all = []
     api.getSunglassesByCategory(id).then((data) => 
       Sunglass.renderAll(data)
     )

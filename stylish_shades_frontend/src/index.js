@@ -21,6 +21,9 @@ const handleOnSubmit = (event) => {
   //2. iterate and compare input >= this.sunglass.price
 //}
 
+
+document.getElementById("sort").addEventListener("click", Sunglass.sortPrice)
+
 document.getElementById("filter").addEventListener("submit", handleOnSubmit)
 
 //const topButton = document.querySelector("#top-button")
