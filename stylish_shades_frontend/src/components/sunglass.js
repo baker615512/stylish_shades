@@ -1,10 +1,12 @@
 class Sunglass {
   static container = document.getElementById("sunglasses-container")
+  static all = []
 
   constructor(sunglass){
     this.sunglass = sunglass
     this.render()
     this.attachEventListener()
+    Sunglass.all.push(this)
   }
 
   static renderAll(sunglasses){
