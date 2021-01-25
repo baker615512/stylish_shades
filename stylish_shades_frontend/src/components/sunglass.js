@@ -61,12 +61,7 @@ class Sunglass {
     sortedArray.forEach(function(sunglass){
       sunglass.render()
       sunglass.attachEventListener()
-    })
-      
+    })   
   } 
-
-  //static handleTopButton = () => {
-  //  console.log("do whatever a button needs to do")
-  //}
 }
 
